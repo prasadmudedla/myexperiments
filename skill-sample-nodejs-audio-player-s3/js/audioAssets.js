@@ -1,15 +1,13 @@
 'use strict';
 
-// Audio Source - AWS Podcast : https://aws.amazon.com/podcasts/aws-podcast/
+// Replace bucket names 
+
 var params = {
     Bucket: "alexatest99",
     MaxKeys: 1000
 };
 
 var audioData = [];
-
-// audioData.push({title:"Episode 139",url:"https://feeds.soundcloud.com/stream/275202399-amazon-web-services-306355661-amazon-web-services.mp3"});
-// audioData.push({title:"Episode 140",url:"https://feeds.soundcloud.com/stream/274166909-amazon-web-services-306355661-aws-podcast-episode-139.mp3"});
 
 // call AWS S3
 var AWS = require('aws-sdk');
@@ -22,7 +20,7 @@ S3read(params,  myResult => {
 
 if (myResult.Contents) {
     for (var i = 0; i < myResult.Contents.length; i++) {
-        var key = myResult.Contents[i].Key;    //See above code for the structure of data.Contents
+        var key = myResult.Contents[i].Key;    
         audioData.push({title:"title",url:"https://s3.amazonaws.com/" + myResult.Name + "/" + myResult.Contents[i].Key});
 
     }
