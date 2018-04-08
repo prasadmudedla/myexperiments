@@ -38,7 +38,6 @@ ask new [options]
 ask new [--template [template-name] [--url <url>]] [-n|--skill-name <name>] [-p|--profile <profile>] [--lambda-name <lambda-name>]
 
  Options:
-
     --template [template-name]     #create a skill project based on the chosen template
     --url <url>                    #provide a customized list of templates
     -n, --skill-name <name>        #create new skill project with skill name
@@ -70,7 +69,6 @@ ask clone [options]
 ask clone [-s|--skill-id <skill-id>] [-p|--profile <profile>] [--debug]
 
   Options:
-
   -s, --skill-id <skill-id>  #skill-id for the skill
   -p, --profile <profile>    #ask cli profile
   --debug                    #ask cli debug mode
@@ -85,7 +83,6 @@ simulate a user using your skill
 Usage: simulate <[-f|--file <file-path>] | [-t|--text <text>]> [-l|--locale <locale>] [-s|--skill-id <skill-id>] [-p|--profile <profile>] [--debug]
 
 Options:
-
   -f, --file <file-path>     #path for simulate input file, needed if <-t, --text> is not specified.
   -t, --text <text>          #text for utterance text
   -l, --locale <locale>      #locale for the utterance text
@@ -114,10 +111,9 @@ Download an existing Lambda function
 ### `ask lambda download`
 
 ```yml
-Usage: download [-f|--function <function>] [-d|--dest <dest>] [-p|--profile <profile>]
+ask lambda download [-f|--function <function>] [-d|--dest <dest>] [-p|--profile <profile>]
 
   Options:
-
   -f, --function <function>  #download with function name
   -d, --dest <dest>          #set the path of downloaded project
   -p, --profile <profile>    #ask cli profile
@@ -127,10 +123,9 @@ Usage: download [-f|--function <function>] [-d|--dest <dest>] [-p|--profile <pro
 ### `ask lambda upload`
 upload an existing Lambda function
 ```yml
-Usage: upload <-f|--function <function>> [-s|--src <source>] [-p|--profile <profile>]
+ask lambda upload <-f|--function <function>> [-s|--src <source>] [-p|--profile <profile>]
 
   Options:
-
     -f, --function <function>  #upload to the specified Lambda function
     -s, --src <source>         #upload specified source folder
     -p, --profile <profile>    #ask cli profile
@@ -141,10 +136,9 @@ Usage: upload <-f|--function <function>> [-s|--src <source>] [-p|--profile <prof
 View Cloudwatch logs for a Lambda function
 ```yml
 
-Usage: log <-f|--function <function>> [--start-time <start-time>] [--end-time <end-time>] [--limit <number>] [--raw] [-p|--profile <profile>]
+ask lambda log <-f|--function <function>> [--start-time <start-time>] [--end-time <end-time>] [--limit <number>] [--raw] [-p|--profile <profile>]
 
 Options:
-
   -f, --function <function>  #display logs by Lambda function name
   --start-time <start-time>  #start time for the log time range
   --end-time <end-time>      #end time for the log time range
@@ -163,7 +157,6 @@ The api command provides a number of subcommands that enable you to create and m
 ask api [options] [command]
 
 Commands:
-
     get-model [options]                            #get an interaction model for skill
     head-model [options]                           #get the ETag associated with an interaction model
     update-model [options]                         #create/update the new interaction model for skill
@@ -192,4 +185,4 @@ Commands:
 Also see
 --------
 
- * [Getting Started](http://www.docker.io/gettingstarted/) _(docker.io)_
+ * [Getting Started](https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html) _(ASK CLI Command Reference)_
