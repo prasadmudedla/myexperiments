@@ -4,7 +4,9 @@
   "description": "An audio player sample skill.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "alexa",
@@ -14,10 +16,12 @@
   "author": "Amazon.com",
   "license": "See license in ../LICENSE.txt",
   "dependencies": {
-    "alexa-sdk": "^1.0.4"
+    "alexa-sdk": "^1.0.4",
+    "snyk": "^1.316.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/alexa/skill-sample-nodejs-audio-player"
-  }
+  },
+  "snyk": true
 }
